@@ -1,0 +1,19 @@
+<%- include('../includes/head.ejs') %>
+
+
+<h1>COMPOSE BLOG</h1>
+<form class="" action="/cblog" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" type="text" name="blogTitle" min="10">
+    <label>Image </label>
+    <input class="form-control" type="file" name="blogImage">
+    <label>Description</label>
+    <textarea class="form-control" name="blogDescription" rows="5" cols="30"></textarea>
+  </div>
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+  <div class='btnn'><button class="btn btn-primary" type="submit" name="blogButton">Publish</button></div>
+</form>
+
+
+<%- include('../includes/end.ejs') %>

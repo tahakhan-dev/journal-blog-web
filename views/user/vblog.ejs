@@ -1,0 +1,117 @@
+<%- include('../includes/head.ejs') %>
+
+
+<div class="header ppcard1">
+  <h2>Users Blogs</h2>
+</div>
+
+<div class="row divimagesblock">
+  <div class="leftcolumn ">
+    <% if ( blogs.length > 0){ %>
+      <div class="cards">
+        <% console.log(blogs); %>
+        <% blogs.forEach((blog) => { %>
+
+
+
+          <div class="card ppcard2">
+            <h1 class = 'test2vb'><%= blog.title.slice(0,60) + '...' %></h1>
+            <h5 class="heading5">Publish on , <%= blog.date %></h5>
+            <img class="card__image" src=<%= blog.Image %> alt="">
+            <% console.log(blog.Image); %>
+            <div class="card__content">
+              <p>
+                <%= blog.Description.slice(0,350) + "...." %>
+              </p>
+            </div>
+            <div class="card__info">
+              <div>
+                <i class="material-icons">visibility</i>
+                <% if(blog.views> 0){ %>
+                  <%= blog.views %>
+                <% }else { %>
+                  0
+                <% } %>
+              </div>
+
+              <div>
+                <% console.log(blog._id); %>
+                <a href="/blog-detail/<%= blog._id %>" class="card__link">View Article</a>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+
+
+        <% } else { %>
+          <h1 class="test1"> NO BLOG POST FOUND</h1>
+          <% } %>
+        </div>
+        <div class="rightcolumn">
+
+
+            <div class="ppcard ppcard3">
+              <% if (popularPost1) { %>
+              <h3 class="heading5">Popular Post</h3>
+              <% } else { %>
+                <h3 class="heading5"> No Popular blog find </h3>
+              <% }%>
+
+
+              <% if (popularPost1 ){ %>
+               <div class="pcard ppcard3" >
+                 <h1 class = 'ptest'><%= popularPost1.title %></h1>
+                 <img class="pcard__image" src=<%= popularPost1.Image %>  alt="">
+                 <div class="pcard__info">
+                   <div>
+                     <i class="material-icons">visibility</i><%= popularPost1.views %>
+                   </div>
+                   <div>
+                     <a href="/blog-detail/<%= popularPost1._id %>" class="card__link">View Article</a>
+                   </div>
+                 </div>
+               </div>
+               <% } %>
+
+               <% if ( popularPost2 ){ %>
+               <div class="pcard ppcard3">
+                 <h1 class = 'ptest'><%= popularPost2.title %></h1>
+                 <img class="pcard__image" src=<%= popularPost2.Image %>  alt="">
+                 <div class="pcard__info">
+                   <div>
+                     <i class="material-icons">visibility</i><%= popularPost2.views %>
+                   </div>
+                   <div>
+                     <a href="/blog-detail/<%= popularPost2._id %>" class="card__link">View Article</a>
+                   </div>
+                 </div>
+               </div>
+               <% } %>
+
+               <% if( popularPost3 ){ %>
+               <div class="pcard ppcard3">
+                 <h1 class = 'ptest'><%= popularPost3.title %></h1>
+                 <img class="pcard__image" src=<%= popularPost3.Image %>  alt="">
+                 <div class="pcard__info">
+                   <div>
+                     <i class="material-icons">visibility</i><%= popularPost3.views %>
+                   </div>
+                   <div>
+                     <a href="/blog-detail/<%= popularPost3._id %>" class="card__link">View Article</a>
+                   </div>
+                 </div>
+               </div>
+               <% } %>
+            </div>
+          <div class="card ppcard3">
+            <h3>Follow Us</h3>
+            <p>Some text..</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <%- include('../includes/end.ejs') %>

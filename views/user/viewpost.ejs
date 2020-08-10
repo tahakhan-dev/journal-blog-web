@@ -1,0 +1,73 @@
+<%- include('../includes/head.ejs') %>
+
+
+<div class="divimagges">
+	<form class="ab" action="/viewpost" method="get">
+		<label for ="departure" > Calender </label>
+		<input class="cal" type="date" name="date">
+		<input type="hidden" name="hiddenCal" value="true">
+		<button class="buttonc" type="submit" name="button">Submit</button>
+		<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+	</form>
+	<h1 class="test2">Daily Diary</h1>
+</div>
+<div class='divimages'>
+	<form  action="/viewpost" method="get">
+		<div class="yearWrapper">
+			<select class="form-control1" id="dYear" name='searchYear'>
+				<option value="0 "> <h1 class="test4"> Search By Year</h1></option>
+			</select>
+			<input type="hidden" name="hiddenSearchVal" value="true">
+			<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+			<button class="buttond" type="submit" name="button">Submit</button>
+		</div>
+	</form>
+	<% if (postss.length > 0){ %>
+		<%	postss.forEach((post) => {  %>
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h1 class='test1'> <%= 'Day ' + post.day %></h1>
+						<% if(hvalue='true') { %>
+							<h3 class ='test11'>TITLE: <span class="tag"><%= year %></span></h3>
+							<% } else { %>
+								<h3 class ='test11'>TITLE: <span class="tag"><%= posts.year %></span></h3>
+								<% } %>
+								<h3 class="test3"><%=post.title.substring(0, 159) %></h3>
+							</div>
+							<div class="flip-box-back">
+								<h2 class='test22'>DESCRIPTION:</h2>
+
+									<input type="hidden" value="<%= post._id %>" name="postID">
+									<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+									<!-- pehle tha aik form delete ka woh delete krta tha or uske baad refresh or ab mene json data use keya hai yeh page ko update krta hai refresh nhi
+									or yeh jo "deletePost(this)" jo "this" hai woh refer kr raha hai button ko -->
+									<span class="dtag"><button class="btn" type="button" onclick="deletePost(this)">Delete</button></span>
+
+								<p class="test0">
+									<% postIID = post._id; %>
+									<%= post.description.substring(0, 165) + "...." %>
+									<% if( hiddenCal = 'true' || searchvalue == 'true'){ %>
+										<a href="/post-details/<%= post._id %>"> Read More</a>
+										<% } else { %>
+											<a href="/post-details/<%= postIID %>"> Read More</a>
+											<% } %>
+										</p>
+										<a href="/post-edit/<%= post._id %>" class="abclink">Edit Diary Post</a>
+									</div>
+								</div>
+							</div>
+							<% }); %>
+							<!-- yeh pagination use keya hai yaha pr means kitne page load krne hai -->
+							<%- include('../includes/pagination.ejs', {currentPage: currentPage, nextPage: nextPage, previousPage: previousPage, lastPage: lastPage, hasNextPage: hasNextPage, hasPreviousPage: hasPreviousPage}) %>
+							<% } else { %>
+								<h1 class="noProduct"><b>No Post Found</b></h1>
+								<% } %>
+							</div>
+
+
+
+
+
+							<%- include('../includes/end.ejs') %>
+							<script src="/js/userdiary.js" ></script>

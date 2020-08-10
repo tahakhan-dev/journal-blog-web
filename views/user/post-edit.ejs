@@ -1,0 +1,24 @@
+<%- include('../includes/head.ejs') %>
+
+<h1>COMPOSE POST</h1>
+
+<form class="" action="/post-edit" method="POST">
+  <div class="form-group">
+    <% if (errorMessage) { %>
+      <div class = " user-messages user-message-error"> <%= errorMessage %> </div>
+      <% } %>
+      <label>Update Day</label>
+      <input class="form-control" type="number" min="1" max='366' name="day" value="<%= post.day %>">
+      <label>Update Title</label>
+      <input class="form-control" type="text" name="postTitle" value="<%=post.title %>">
+      <label>Update Post</label>
+      <textarea class="form-control" name="postBody"  rows="5" cols="30"><%= post.description %></textarea>
+      <input type="hidden" value="<%= post._id %>" name="postID">
+    </div>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <div class='btnn'><button class="btn btn-primary" type="submit" name="button">Update Diary Post</button></div>
+  </form>
+
+
+
+  <%- include('../includes/end.ejs') %>

@@ -1,0 +1,30 @@
+<%- include('../includes/head.ejs') %>
+<% console.log('taha'); %>
+<% console.log(blog.Image); %>
+<div class="postd-div">
+	<h1 class='test4b'> <span style=" font-size: 1.5em;">Publish on </span> <span style="color:black;"><%= blog.date %> </span>  </h1>
+	<h1 class="test1D">  </h1>
+
+
+	<div class='content'>
+
+		<h1 class='pdh1'>
+			<span><%= blog.title %></span>
+		</h1>
+		<div class='text'>
+			<h1 ><span style="background-color: rgb(240, 124, 98);" >Description:</span></h1>
+			<p class="pp1">
+				<%= blog.Description %>
+			</p>
+
+
+		</div>
+	</div>
+
+
+
+</div>
+
+
+
+<%- include('../includes/end.ejs') %>

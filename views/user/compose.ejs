@@ -1,0 +1,23 @@
+<%- include('../includes/head.ejs') %>
+
+<h1>COMPOSE POST</h1>
+
+<form class="" action="/compose" method="POST">
+  <div class="form-group">
+    <% if (errorMessage) { %>
+      <div class = " user-messages user-message-error"> <%= errorMessage %> </div>
+      <% } %>
+      <label>Day</label>
+      <input class="form-control" type="number" min="1" max='366' name="day">
+      <label>Title</label>
+      <input class="form-control" type="text" name="postTitle">
+      <label>Post</label>
+      <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+    </div>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <div class='btnn'><button class="btn btn-primary" type="submit" name="button">Publish</button></div>
+  </form>
+
+
+
+  <%- include('../includes/end.ejs') %>

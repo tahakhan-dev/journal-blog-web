@@ -1,0 +1,222 @@
+<%- include('../includes/head.ejs') %>
+
+<meta charset="UTF-8">
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+  <!-- PRE LOADER -->
+  <section class="preloader">
+    <div class="spinner">
+
+      <span class="spinner-rotate"></span>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- HOME -->
+  <section id="home" class="slider" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+
+        <div class="owl-carousel owl-theme">
+          <div class="item item-first">
+            <div class="caption">
+              <div class="col-md-offset-1 col-md-10">
+                <h3>Keep a Diary,and</h3>
+                <h1>someday it'll Keep you</h1>
+                <a href="/signup" class="section-btn btn btn-default smoothScroll">GET STARTED</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-second">
+            <div class="caption">
+              <div class="col-md-offset-1 col-md-10">
+                <h3>Nothng in Life </h3>
+                <h2> is Ever Easy  </h2>
+                <h1>       &       </h1>
+                <h3>What's Easy is </h3>
+                <h2> Not Worth it  </h2>
+
+                <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-third">
+            <div class="caption">
+              <div class="col-md-offset-1 col-md-10">
+                <h3>The life of every person is like a diary in which</h3>
+                <h1>he means to write one story, and writes another.</h1>
+                <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Wirte About your life</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-sm-6">
+          <div class="about-info">
+            <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your Daily Journal</h2>
+            <div class="wow fadeInUp" data-wow-delay="0.8s">
+              <p><b>In this website you can write about your personal life and what happen to you in all day and ease your mind </b></p>
+              <p><b>“Keeping a personal journal a daily in-depth analysis</b></p>
+              <p><b>and evaluation of your experiences is a high-leverage</b></p>
+              <p><b>activity that increases self-awareness and enhances</b></p>
+              <p><b>all the endowments and the synergy among them.”</b></p>
+            </div>
+            <figure class="profile wow fadeInUp" data-wow-delay="1s">
+              <img src="images/author-image.jpg" class="img-responsive" alt="">
+              <figcaption>
+                <h3>Anonymous</h3>
+                <p>---------------</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- NEWS -->
+  <section id="news" data-stellar-background-ratio="2.5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+          <!-- SECTION TITLE -->
+          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+            <h2>Features</h2>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <!-- NEWS THUMB -->
+          <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+            <a href="news-detail.html">
+              <img src="images/news-image1.jpg" class="img-responsive" alt="">
+            </a>
+            <div class="news-info">
+              <h2> <span> Search By Calender </span></h2>
+              <p>You Can Search your Daily routine by clicking on date which you wnat to search</p>
+              <p>Only User of this website can access this Calender non User Can't access it</p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <!-- NEWS THUMB -->
+          <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+            <a href="news-detail.html">
+              <img src="images/news-image2.jpg" class="img-responsive" alt="">
+            </a>
+            <div class="news-info">
+              <h2><span> Edit Post </span></h2>
+              <p>You can edit post which you have already written or can delete it </p>
+              <p>This fuctinality is available for Users</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <!-- NEWS THUMB -->
+          <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+            <a href="news-detail.html">
+              <img src="images/news-image3.jpg" class="img-responsive" alt="">
+            </a>
+            <div class="news-info">
+              <h2><span>View Post</span></h2>
+              <p>You can view all your post from begging to end.</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MAKE AN APPOINTMENT -->
+  <section id="appointment" data-stellar-background-ratio="3">
+    <div class="container">
+      <div class="row">
+
+
+          <!-- CONTACT FORM HERE -->
+          <form id="appointment-form" role="form" method="post" action="#">
+
+            <!-- SECTION TITLE -->
+            <div class="qeryT">
+              <h2>Have Some query?</h2>
+              <h2>Send us feedback</h2>
+            </div>
+
+                <label class="cent" for="name">Title</label>
+                <input type="text" class="form-control cent" id="name" name="name" placeholder="What's query?">
+                <label class="cent" for="Message"> Message</label>
+                <textarea class="form-control cent" rows="5" id="message" name="message" placeholder="Description about query"></textarea>
+                <button  class="form-control cent" id="cf-submit" name="submit">Submit </button>
+
+          </form>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- FOOTER -->
+<footer data-stellar-background-ratio="5">
+  <div class="container">
+    <div class="row">
+
+
+
+      <div class="col-md-12 col-sm-12 border-top">
+        <div class="col-md-4 col-sm-6">
+          <div class="copyright-text">
+            <p>Copyright &copy; 2018 Your Company
+
+              | Design: Tooplate</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="footer-link">
+              <a href="#">Blog writing</a>
+              <a href="#">Blog reading</a>
+              <a href="#">Daily journal</a>
+              <a href="#">view journal</a>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2 text-align-center">
+            <div class="angle-up-btn">
+              <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <%- include('../includes/end.ejs') %>
