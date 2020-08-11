@@ -74,7 +74,7 @@ body {
   background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   padding: 20px;
   margin-top: 10px;
-  
+
 }
 
 .leftcolumnb{
@@ -579,7 +579,7 @@ ul li.active a{
   .flip-box-front {
     background-color: #bbb;
     color: black;
-    background-image: url('https://images.unsplash.com/photo-1515339760107-1952b7a08454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMzk2fQ&auto=format&fit=crop&w=1050&q=80');
+    background-image: url('../images/flip-front.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -589,27 +589,27 @@ ul li.active a{
     background-color: dodgerblue;
     color: black;
     transform: rotateY(180deg);
-    background-image: url('https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+    background-image: url('../images/back.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
   .divimages{
-    background-image: url('https://images.unsplash.com/photo-1492892132812-a00a8b245c45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    background-image: url('../images/post-back.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     padding-bottom: 30%;
   }
   .divimagesblock{
-    background-image: url('https://images.unsplash.com/photo-1519970163512-f2d878f658c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    background-image: url('../images/blog-back.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     padding-bottom: 30%;
   }
   .divimagges{
-    background-image: url('https://images.unsplash.com/photo-1515339760107-1952b7a08454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMzk2fQ&auto=format&fit=crop&w=1050&q=80');
+    background-image: url('../images/flip-front.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
